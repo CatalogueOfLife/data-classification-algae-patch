@@ -1,5 +1,8 @@
-# data-template-textree
-A template for [ChecklistBank](https://www.checklistbank.org) dataset repositories using the simple [TextTree format](https://github.com/gbif/text-tree).
+# Catalogue of Life Algae Classification Patch
+
+A small dataset that acts as a gap filler in extended releases for the Algae management classification of the Catalogue of Life.
+https://www.checklistbank.org/dataset/304143/about
+
 
 ## Files
 The main taxonomy tree lives in [taxonomy.txtree](taxonomy.txtree). 
@@ -28,18 +31,3 @@ For example by using curl on the terminal like this:
 There are also online editors, e.g. https://truben.no/latex/bibtex/#
 
 Using Mendeley or Zotero can also be used to collaboratively manage references and export them to a BibTex file to be used in the repository.
-
-
-## Github webhooks
-Once the dataset is created in ChecklistBank (CLB), Github webhooks can be used to automatically update the copy in ChecklistBank 
-whenever a commit to the repository happens. Configure:
-
- a) the dataset access URL in CLB to point to the github repo zip archive, e.g. https://github.com/CatalogueOfLife/data-vespoidea/archive/refs/heads/master.zip
- b) the github repo webhook in settings to point to http://api.checklistbank.org/importer/{DATASET_KEY}/github
- c) configure github to use a secret that the CLB admin hands over to you confidently. Please contact mdoering@gbif.org for this!
-
-
-## Git precommit hook
-You can configure a git ore commit hook to automatically update the issued date of your metadata.yaml.
-For this to work simply place the [pre-commit.hook](pre-commit.hook) file into your `.git/hooks` folder.
-
