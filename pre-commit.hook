@@ -4,4 +4,5 @@ d=`date +%Y-%m-%d`
 sed -i '' "s/^issued: 20..-..-..$/issued: $d/g" metadata.yaml
 git add metadata.yaml
 echo "Updated issued in metadata.yaml"
+
 exit 0
